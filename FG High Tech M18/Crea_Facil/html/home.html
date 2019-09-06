@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="pt-pr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>CREA - Fácil</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
+
+        <!-- Bootstrap core CSS -->
+
+        <link href="./css/bootstrap2.css" rel="stylesheet" >
+        <link href="./css/dataTables.bootstrap4.min.css" rel="stylesheet" >
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/jquery.dataTables.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+            $(document).ready(function () {
+                $('#example2').DataTable();
+            });
+            $(document).ready(function () {
+                $('#example3').DataTable();
+            });
+        </script>
+        <script src="./js/app.js"></script>
+        <style>
+
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="./css/pricing.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">CREA - Fácil</h5>
+            <!--nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Pefil</a>
+                <a class="p-2 text-dark" href="#">Consultas</a>
+            </nav-->
+            <a class="btn btn-outline-primary" href="./index.php">Sair</a>
+        </div>
+
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        </div>
+
+        <div class="container">
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Vencidas</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"> 04 </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>04 Municípios</li>
+                            <li>04 Empresas</li>
+
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-danger" onclick="showModal1()">Notificar</button>
+                    </div>
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Hoje</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">11</h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>11 Municípios</li>
+                            <li>11 Empresas</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-success" onclick="showModal2()">Notificar</button>
+                    </div>
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Mês</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"> 16 </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>16 Municípios</li>
+                            <li>16 Empresas</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="showModal3()" >Notificar</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" onclick="closeModal3()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                        </div>
+                        <div class="modal-body">
+                            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Data</th>
+                                        <th>CNPJ</th>
+                                        <th>Nome</th>
+                                        <th>Endereço</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>73730</td>
+                                        <td>15/08/2019</td>
+                                        <td>45.163.632/0001-83</td>
+                                        <td>Autogiga</td>
+                                        <td>Rua Iranei Rodrigues de Oliveira 50, Porto Belo, Ivaiporã</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>78349</td>
+                                        <td>08/08/2019</td>
+                                        <td>45.72.227/0002-14</td>
+                                        <td>Caio Estruturas Metálicas</td>
+                                        <td>Rua México 716, Centro, Dois Vizinhos</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>89389</td>
+                                        <td>17/08/2019</td>
+                                        <td>091.144.238/0005-90</td>
+                                        <td>Casa do Lucas/</td>
+                                        <td>Rua Almirante Barroso 402, Vila Carli, Guarapuava</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>79322</td>
+                                        <td>12/08/2019</td>
+                                        <td>875.128.901/0007-72</td>
+                                        <td>Escritório Hallf Carl</td>
+                                        <td>Av Irmãos Pereira, Centro, Campo Mourão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="closeModal3()" data-dismiss="modal">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" onclick="closeModal3()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                        </div>
+                        <div class="modal-body">
+                            <table id="example2" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Data</th>
+                                        <th>CNPJ</th>
+                                        <th>Nome</th>
+                                        <th>Endereço</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>98732</td>
+                                        <td>18/08/2019</td>
+                                        <td>82.982.146/0002-67</td>
+                                        <td>Condomínio Estância Marlene</td>
+                                        <td>Rua Florita Maria de Jesus 12, Residêncial Estância Marlene, Cornélio Procópio</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>01262</td>
+                                        <td>18/08/2019</td>
+                                        <td>12.012.090/0002-67</td>
+                                        <td>Freeway</td>
+                                        <td>Rua José Antônio Molinari 507, São Francisco, Laranjeiras do Sul</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>23419</td>
+                                        <td>18/08/2019</td>
+                                        <td>90.282.141/0003-17</td>
+                                        <td>Posto de Combustível WOUK</td>
+                                        <td>Rod Pr-483 Km 21 , Centro, Francisco Beltrão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>65632</td>
+                                        <td>18/08/2019</td>
+                                        <td>63.793.838/0008-33</td>
+                                        <td>Granja Topigs</td>
+                                        <td>Rural S/N, Rural, Pinhão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>22902</td>
+                                        <td>18/08/2019</td>
+                                        <td>09.732.012/0001-73</td>
+                                        <td>Seralle Calçados</td>
+                                        <td>Av Tupi 6225, Santo Antônio, Pato Branco</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>08126</td>
+                                        <td>18/08/2019</td>
+                                        <td>86.962.166/0006-16</td>
+                                        <td>Metalúrgica Silveira</td>
+                                        <td>Rua Quinze de Novembro 5591, Centro, Guarapuava</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12683</td>
+                                        <td>18/08/2019</td>
+                                        <td>13.983.133/0003-33</td>
+                                        <td>Hostnet</td>
+                                        <td>Rua pessegueiro 122, Centro, Nova Laranjeiras</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>33333</td>
+                                        <td>18/08/2019</td>
+                                        <td>55.985.556/0005-15</td>
+                                        <td>Scherer SA Comércio</td>
+                                        <td>Av Dom Agostinho José Sartori 2637, São Cristóvão, Francisco Beltrão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>80322</td>
+                                        <td>18/08/2019</td>
+                                        <td>80.900.006/0001-01</td>
+                                        <td>Plantação de Soja Coamo</td>
+                                        <td>Sítio Santa Ana Coamo 12kms até Boa Ventura, Bairro Não Informado, Boa Ventura de São Roque</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>88223</td>
+                                        <td>18/08/2019</td>
+                                        <td>83.903.003/0003-03</td>
+                                        <td>Supermercado Dal Pozzo</td>
+                                        <td>Av Manoel Antônio 400, Vila Bela, Guarapuava</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>00362</td>
+                                        <td>18/08/2019</td>
+                                        <td>03.000.124/0001-90</td>
+                                        <td>Grupo Leh</td>
+                                        <td>Rua das Peróbas 371, Cristo Rei, Laranjeiras do Sul</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="closeModal3()" data-dismiss="modal">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" onclick="closeModal3()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <table id="example3" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Data</th>
+                                        <th>CNPJ</th>
+                                        <th>Nome</th>
+                                        <th>Endereço</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10021</td>
+                                        <td>20/08/2019</td>
+                                        <td>13.518.514/0001-85</td>
+                                        <td>Borracharia da Leoni</td>
+                                        <td>Rua Industrial 3636, Vila Bela, Guarapuava</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+
+                                    <tr>
+                                        <td>11010</td>
+                                        <td>20/08/2019</td>
+                                        <td>13.418.514/0001-85</td>
+                                        <td>Açougue Padilha</td>
+                                        <td>Rua Guaraniaçu 1334, Napoli, Ibema</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11086</td>
+                                        <td>22/08/2019</td>
+                                        <td>13.518.519/0001-83</td>
+                                        <td>Supermercado Superpão</td>
+                                        <td>Linha Rio Bonito 50, Rural, Prudentópolis</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12090</td>
+                                        <td>22/08/2019</td>
+                                        <td>15.518.514/0003-85</td>
+                                        <td>Havan</td>
+                                        <td>Av Tupi 6952, São Cristóvão, Pato Branco</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>30218</td>
+                                        <td>23/08/2019</td>
+                                        <td>13.416.514/0001-98</td>
+                                        <td>Leiteria Schulls</td>
+                                        <td>Fazenda São João 10, Zona Rural, Candói</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>21001</td>
+                                        <td>30/08/2019</td>
+                                        <td>15.554.584/0002-82</td>
+                                        <td>Casa do João</td>
+                                        <td>Rua Curitiba 155, Loteamento Lago Dourado, Dois vizinhos</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11659</td>
+                                        <td>02/09/2019</td>
+                                        <td>16.892.222/0001-05</td>
+                                        <td>Havan</td>
+                                        <td>Rua Porto Alegre 373, Alvorada, Francisco Beltrão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10555</td>
+                                        <td>05/09/2019</td>
+                                        <td>21.653.145/0006-43</td>
+                                        <td>Thermas de Verê</td>
+                                        <td>Av Luiz Francisco Paggi 111, Centro, Verê</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>21901</td>
+                                        <td>02/09/2019</td>
+                                        <td>65.894.830/0006-87</td>
+                                        <td>Edifício Residencial Lopez</td>
+                                        <td>Rua aeroporto 180, Centro, Faxinal</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>15555</td>
+                                        <td>01/09/2019</td>
+                                        <td>83.783.987/0009-82</td>
+                                        <td>Casa da Maria</td>
+                                        <td>Rua Carlos Franciso Cenci 99, São Genaro, Chopinzinho</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12255</td>
+                                        <td>10/09/2019</td>
+                                        <td>53.921.091/0005-01</td>
+                                        <td>Klabin</td>
+                                        <td>Rua Acacias 91, Jardim Alegre, Francisco Beltrão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>98720</td>
+                                        <td>05/09/2019</td>
+                                        <td>11.092.092/0003-34</td>
+                                        <td>Casa do Ivo</td>
+                                        <td>Av Trifon Hanysz 69, Centro, Pinhão</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10055</td>
+                                        <td>15/09/2019</td>
+                                        <td>15.653.115/0005-82</td>
+                                        <td>Barracão Milla</td>
+                                        <td>Fazenda Samambaia 580, Colonia Samambaia, Entre Rios-Guarapuava</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>73629</td>
+                                        <td>07/09/2019</td>
+                                        <td>22.654.146/0007-44</td>
+                                        <td>Mecânica Industrial Scherer</td>
+                                        <td>Rua Sergipe 1385, Centro, Marechal Cândido Rondon</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12335</td>
+                                        <td>09/09/2019</td>
+                                        <td>98.356.672/0009-12</td>
+                                        <td>Condomínio Flores Belas</td>
+                                        <td>Rua Anita Trentini 7834, Loteamento Trentini, Marechal Cândido Rondon</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>78210</td>
+                                        <td>09/09/2019</td>
+                                        <td>12.553.541/0007-34</td>
+                                        <td>Luana Cosméticos</td>
+                                        <td>Rua Bombeiro Reni Cingerza 222, Margarida Galvan, Dois Vizinhos</td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-primary">Oficio</button>
+                                                <button type="button" class="btn btn-outline-success">Visitar</button>
+                                                <button type="button" class="btn btn-outline-danger">Adiar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="closeModal1()" data-dismiss="modal">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
